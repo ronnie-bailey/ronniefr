@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ronnie Bailey | International Relations & Digital Human Rights</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --diplomatic-navy: #1a2332;
+            --diplomatic-blue: #2c4a6b;
+            --gold-accent: #c5a572;
+            --light-cream: #f8f6f0;
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --border-color: #cbd5e0;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background-color: var(--light-cream);
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(135deg, rgba(26, 35, 50, 0.88) 0%, rgba(44, 74, 107, 0.85) 100%), 
+                        url('capitol-banner.jpg') center/cover no-repeat;
+            background-attachment: fixed;
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+            border-bottom: 4px solid var(--gold-accent);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(26, 35, 50, 0.3) 100%);
+            pointer-events: none;
+        }
+
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .seal-container {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1.5rem;
+            border: 3px solid var(--gold-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .seal-icon {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--gold-accent);
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            font-family: 'Palatino', 'Georgia', serif;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        }
+
+        .title {
+            font-size: 1.2rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            color: var(--gold-accent);
+            font-style: italic;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 1.5rem auto 0;
+            opacity: 0.95;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+        }
+
+        /* Navigation */
+        nav {
+            background-color: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--diplomatic-blue);
+            border-bottom-color: var(--gold-accent);
+        }
+
+        /* Main Content Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 4rem;
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+            border-left: 4px solid var(--gold-accent);
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--diplomatic-navy);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid var(--gold-accent);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: var(--diplomatic-blue);
+            margin-bottom: 0.8rem;
+            margin-top: 1.5rem;
+        }
+
+        /* Mission Statement */
+        .mission-statement {
+            background: linear-gradient(135deg, #f7f9fc 0%, #ffffff 100%);
+            border-left: 4px solid var(--diplomatic-blue);
+            padding: 2.5rem;
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 3rem;
+            border-radius: 8px;
+        }
+
+        /* Credentials Grid */
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .credential-card {
+            background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .credential-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .credential-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80px;
+            margin-bottom: 1rem;
+        }
+
+        .credential-icon img {
+            max-width: 80px;
+            max-height: 70px;
+            object-fit: contain;
+        }
+
+        .credential-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--diplomatic-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .credential-org {
+            font-size: 0.95rem;
+            color: var(--gold-accent);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .credential-date {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+            margin-top: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--gold-accent);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+            padding-left: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3.4rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--diplomatic-blue);
+            border: 3px solid var(--gold-accent);
+        }
+
+        .timeline-date {
+            font-size: 0.9rem;
+            color: var(--gold-accent);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .timeline-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--diplomatic-navy);
+            margin-bottom: 0.3rem;
+        }
+
+        .timeline-org {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 0.8rem;
+        }
+
+        .timeline-description {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+
+        /* Competencies */
+        .competencies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .competency-category {
+            background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .competency-category h4 {
+            font-size: 1.1rem;
+            color: var(--diplomatic-blue);
+            margin-bottom: 1rem;
+            font-weight: 600;
+            border-bottom: 2px solid var(--gold-accent);
+            padding-bottom: 0.5rem;
+        }
+
+        .competency-category ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .competency-category li {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            padding: 0.4rem 0;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+
+        .competency-category li::before {
+            content: '▪';
+            position: absolute;
+            left: 0;
+            color: var(--gold-accent);
+            font-size: 1.2rem;
+        }
+
+        /* Languages Section */
+        .languages {
+            display: flex;
+            gap: 3rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .language-item {
+            flex: 1;
+            min-width: 250px;
+            background: linear-gradient(135deg, #f7f9fc 0%, #ffffff 100%);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .language-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--diplomatic-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .language-level {
+            font-size: 1rem;
+            color: var(--gold-accent);
+            font-style: italic;
+        }
+
+        /* Focus Areas */
+        .focus-areas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .focus-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 2px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .focus-card:hover {
+            border-color: var(--gold-accent);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .focus-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 70px;
+            margin-bottom: 1rem;
+        }
+
+        .focus-icon img,
+        .focus-icon svg {
+            max-width: 60px;
+            max-height: 60px;
+            object-fit: contain;
+        }
+
+        .focus-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--diplomatic-navy);
+            margin-bottom: 1rem;
+        }
+
+        .focus-description {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+
+        /* Contact Section */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f7f9fc 0%, #ffffff 100%);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-icon svg {
+            width: 32px;
+            height: 32px;
+            fill: var(--diplomatic-blue);
+        }
+
+        .contact-details {
+            flex: 1;
+        }
+
+        .contact-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-value {
+            font-size: 1.05rem;
+            color: var(--diplomatic-navy);
+            font-weight: 500;
+        }
+
+        .contact-value a {
+            color: var(--diplomatic-blue);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-value a:hover {
+            color: var(--gold-accent);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--diplomatic-navy);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .title {
+                font-size: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            nav a {
+                font-size: 0.85rem;
+            }
+
+            section {
+                padding: 2rem 1.5rem;
+            }
+
+            .container {
+                padding: 2rem 1rem;
+            }
+
+            .timeline {
+                padding-left: 2rem;
+            }
+
+            .timeline-item {
+                padding-left: 1.5rem;
+            }
+        }
+
+        .french-translation {
+            font-size: 0.88rem;
+            color: #6b7280;
+            font-style: italic;
+            line-height: 1.7;
+            margin-top: 0.6rem;
+            padding-left: 1.2rem;
+            border-left: 2px solid var(--gold-accent);
+            opacity: 0.9;
+        }
+
+        .timeline-title-fr,
+        .credential-title-fr {
+            font-size: 0.95rem;
+            color: #6b7280;
+            font-style: italic;
+            margin-top: 0.3rem;
+            font-weight: 400;
+        }
+
+        .timeline-org-fr {
+            font-size: 0.88rem;
+            color: #8b92a0;
+            font-style: italic;
+            margin-top: 0.2rem;
+        }
+
+        /* Recommendation Letters */
+        .recommendation-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .recommendation-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            transition: all 0.3s ease;
+        }
+
+        .recommendation-card:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+
+        .recommendation-header {
+            border-bottom: 2px solid var(--gold-accent);
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .recommendation-author h3 {
+            font-size: 1.4rem;
+            color: var(--diplomatic-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .recommendation-title {
+            font-size: 1rem;
+            color: var(--diplomatic-blue);
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+        }
+
+        .recommendation-title-fr {
+            font-size: 0.9rem;
+            color: #6b7280;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        .recommendation-org {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.3rem;
+        }
+
+        .recommendation-date {
+            font-size: 0.85rem;
+            color: var(--gold-accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .recommendation-content {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .recommendation-content p {
+            margin-bottom: 1rem;
+        }
+
+        .recommendation-content em {
+            color: var(--diplomatic-blue);
+            font-style: italic;
+        }
+
+        .recommendation-content strong {
+            color: var(--diplomatic-navy);
+            font-weight: 600;
+        }
+
+        .recommendation-signature {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .recommendation-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media print {
+            nav {
+                display: none;
+            }
+
+            section {
+                page-break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ccc;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="seal-container">
+                <div class="seal-icon">RB</div>
+            </div>
+            <h1>Ronnie Bailey</h1>
+            <p class="title">International Relations Professional & Human Rights Consultant</p>
+            <p class="subtitle">
+                Advancing human rights frameworks, multilateral cooperation, and francophone cultural diplomacy 
+                through sustained commitment to international understanding and cross-cultural engagement
+            </p>
+            <p class="subtitle" style="font-size: 0.9rem; margin-top: 0.8rem; opacity: 0.85;">
+                Promotion des cadres des droits de l'homme, de la coopération multilatérale et de la diplomatie 
+                culturelle francophone par un engagement soutenu envers la compréhension internationale
+            </p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#mission">Mission</a></li>
+            <li><a href="#credentials">Credentials</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#competencies">Competencies</a></li>
+            <li><a href="#recommendations">Recommendations</a></li>
+            <li><a href="#focus">Focus Areas</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="mission">
+            <div class="mission-statement">
+                "The foundation of effective international relations lies in deep cultural understanding, linguistic 
+                proficiency, and genuine commitment to human rights principles. Through intensive francophone studies, 
+                Model United Nations training, and leadership in cross-cultural initiatives, I have built a career 
+                dedicated to bridging diverse communities and advancing multilateral cooperation. My work reflects a 
+                fundamental belief that diplomacy succeeds when grounded in respect, cultural competency, and unwavering 
+                dedication to human dignity."
+                
+                <div class="french-translation" style="margin-top: 1rem; border-left: none; padding-left: 0;">
+                    « Le fondement de relations internationales efficaces repose sur une compréhension culturelle 
+                    approfondie, une maîtrise linguistique et un engagement authentique envers les principes des droits 
+                    de l'homme. À travers des études francophones intensives, une formation aux Nations Unies modèles et 
+                    un leadership dans des initiatives interculturelles, j'ai construit une carrière dédiée à créer des 
+                    ponts entre communautés diverses et à promouvoir la coopération multilatérale. Mon travail reflète 
+                    la conviction fondamentale que la diplomatie réussit lorsqu'elle est ancrée dans le respect, la 
+                    compétence culturelle et un engagement inébranlable envers la dignité humaine. »
+                </div>
+            </div>
+        </section>
+
+        <section id="credentials">
+            <h2>Professional Credentials</h2>
+            <div class="credentials-grid">
+                <div class="credential-card">
+                    <div class="credential-icon">
+                        <img src="https://usidhr.org/wp-content/uploads/2023/01/cropped-USIDHR-LOGO.png" alt="USIDHR Logo" style="width: 80px; height: auto;">
+                    </div>
+                    <div class="credential-title">Certified Human Rights Consultant</div>
+                    <div class="credential-title-fr">Consultant certifié en droits de l'homme</div>
+                    <div class="credential-org">US Institute of Diplomacy and Human Rights</div>
+                    <div class="credential-date">December 2023 | Certificate ID: 88507847</div>
+                </div>
+
+                <div class="credential-card">
+                    <div class="credential-icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Seal_of_the_Architect_of_the_Capitol.svg/1200px-Seal_of_the_Architect_of_the_Capitol.svg.png" alt="Architect of the Capitol Seal" style="width: 70px; height: auto;">
+                    </div>
+                    <div class="credential-title">U.S. Government Service (GS-5)</div>
+                    <div class="credential-title-fr">Service du gouvernement américain (GS-5)</div>
+                    <div class="credential-org">Architect of the Capitol | U.S. Capitol Visitor Center</div>
+                    <div class="credential-date">Sept 2017 - Apr 2018 | Washington, D.C.</div>
+                </div>
+
+                <div class="credential-card">
+                    <div class="credential-icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Seal_of_the_United_States_Department_of_Homeland_Security.svg/1200px-Seal_of_the_United_States_Department_of_Homeland_Security.svg.png" alt="DHS Seal" style="width: 70px; height: auto;">
+                    </div>
+                    <div class="credential-title">DHS Records Management Certificate</div>
+                    <div class="credential-title-fr">Certificat de gestion des archives du DHS</div>
+                    <div class="credential-org">U.S. Department of Homeland Security</div>
+                    <div class="credential-date">August 2022 | Course: OSP1001</div>
+                </div>
+
+                <div class="credential-card">
+                    <div class="credential-icon">
+                        <img src="https://www.clark.edu/cc/images/logo.svg" alt="Clark College Logo" style="width: 80px; height: auto;">
+                    </div>
+                    <div class="credential-title">International Studies Certificate Program</div>
+                    <div class="credential-title-fr">Programme de certificat d'études internationales</div>
+                    <div class="credential-org">Clark College | Model UN Training</div>
+                    <div class="credential-date">2013-2016 | Focus: IR & French Studies</div>
+                </div>
+
+                <div class="credential-card">
+                    <div class="credential-icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/ee/Alliance_fran%C3%A7aise_logo.svg/1200px-Alliance_fran%C3%A7aise_logo.svg.png" alt="Alliance Française Logo" style="width: 80px; height: auto;">
+                    </div>
+                    <div class="credential-title">French Language & Literature Studies</div>
+                    <div class="credential-title-fr">Études de langue et littérature françaises</div>
+                    <div class="credential-org">Alliance Française de Portland</div>
+                    <div class="credential-date">2013-2016 | FLE Methodology Training</div>
+                </div>
+
+                <div class="credential-card">
+                    <div class="credential-icon">
+                        <img src="https://redistrictingaction.org/wp-content/uploads/2021/01/all-on-the-line-logo.png" alt="All On The Line Logo" style="width: 80px; height: auto;">
+                    </div>
+                    <div class="credential-title">Civic Engagement & Political Organizing</div>
+                    <div class="credential-title-fr">Engagement civique et organisation politique</div>
+                    <div class="credential-org">All On The Line / Redistricting Action</div>
+                    <div class="credential-date">2008 | Grassroots Mobilization</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Career Trajectory</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-title">Certified Human Rights Consultant</div>
+                    <div class="timeline-title-fr">Consultant certifié en droits de l'homme</div>
+                    <div class="timeline-org">US Institute of Diplomacy and Human Rights</div>
+                    <div class="timeline-description">
+                        Completed comprehensive training in human rights consultation, focusing on international human 
+                        rights law, diplomatic protocols, multilateral negotiation strategies, conflict resolution, 
+                        human rights monitoring and advocacy, cultural competency in international development, and 
+                        policy analysis and impact assessment.
+                    </div>
+                    <div class="french-translation">
+                        Formation complète en consultation en droits de l'homme, axée sur le droit international des 
+                        droits de l'homme, les protocoles diplomatiques, les stratégies de négociation multilatérale, 
+                        la résolution des conflits, le suivi et la défense des droits de l'homme, la compétence culturelle 
+                        en développement international, ainsi que l'analyse et l'évaluation de l'impact des politiques.
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">September 2017 - April 2018</div>
+                    <div class="timeline-title">Visitors Assistant (GS-5)</div>
+                    <div class="timeline-title-fr">Assistant aux visiteurs (GS-5)</div>
+                    <div class="timeline-org">Architect of the Capitol | U.S. Capitol Visitor Center, Washington, D.C.</div>
+                    <div class="timeline-org-fr">Architecte du Capitole | Centre d'accueil des visiteurs du Capitole américain, Washington, D.C.</div>
+                    <div class="timeline-description">
+                        Served as primary point of contact for up to 15,000 daily visitors at the U.S. Capitol, 
+                        representing the Capitol Visitor Center's values of professionalism, integrity, and teamwork. 
+                        Welcomed and guided diverse visitor groups ensuring an educational and inclusive experience 
+                        across cultural, linguistic, and accessibility contexts.
+                    </div>
+                    <div class="french-translation">
+                        Point de contact principal pour jusqu'à 15 000 visiteurs quotidiens au Capitole américain, 
+                        représentant les valeurs de professionnalisme, d'intégrité et de travail d'équipe du Centre 
+                        d'accueil. Accueil et accompagnement de groupes de visiteurs diversifiés, garantissant une 
+                        expérience éducative et inclusive dans des contextes culturels, linguistiques et d'accessibilité 
+                        variés.
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2013 - 2016</div>
+                    <div class="timeline-title">International Relations Studies & Cultural Leadership</div>
+                    <div class="timeline-title-fr">Études en relations internationales et leadership culturel</div>
+                    <div class="timeline-org">Clark College | Alliance Française de Portland</div>
+                    <div class="timeline-description">
+                        Pursued International Studies Certificate with concurrent three-year enrollment in Alliance 
+                        Française French language programming. Served 2.5 years as Vice President and subsequently 
+                        as President of Cercle Français, leading cultural diplomacy initiatives and increasing community 
+                        engagement by 65%. Received Oswald Award for Outstanding Student Achievement (2015, 2016).
+                    </div>
+                    <div class="french-translation">
+                        Poursuite du certificat d'études internationales avec inscription simultanée de trois ans au 
+                        programme de langue française de l'Alliance Française. Service de 2,5 ans comme vice-président 
+                        puis président du Cercle français, dirigeant des initiatives de diplomatie culturelle et 
+                        augmentant l'engagement communautaire de 65%. Récipiendaire du prix Oswald pour réussite 
+                        étudiante exceptionnelle (2015, 2016).
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2011</div>
+                    <div class="timeline-title">Cross-Cultural Language Specialist</div>
+                    <div class="timeline-title-fr">Spécialiste linguistique interculturel</div>
+                    <div class="timeline-org">Lang-8, Inc. | Tokyo, Japan (Remote)</div>
+                    <div class="timeline-org-fr">Lang-8, Inc. | Tokyo, Japon (télétravail)</div>
+                    <div class="timeline-description">
+                        Provided linguistic consultation and cultural mediation services for Tokyo-based international 
+                        language exchange platform serving 2+ million users across 90+ countries. Delivered real-time 
+                        interpretation and translation services between English and French for multilingual user community.
+                    </div>
+                    <div class="french-translation">
+                        Consultation linguistique et services de médiation culturelle pour une plateforme internationale 
+                        d'échange linguistique basée à Tokyo, desservant plus de 2 millions d'utilisateurs dans plus de 
+                        90 pays. Prestation de services d'interprétation et de traduction en temps réel entre l'anglais 
+                        et le français pour une communauté d'utilisateurs multilingues.
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2008</div>
+                    <div class="timeline-title">Political Canvasser (Volunteer)</div>
+                    <div class="timeline-title-fr">Militant politique (bénévole)</div>
+                    <div class="timeline-org">All On The Line / Redistricting Action | Richmond, Virginia</div>
+                    <div class="timeline-description">
+                        Led grassroots community mobilization initiatives to boost political awareness and voter 
+                        registration. Designed and delivered civic education workshops on democratic processes, 
+                        increasing informed local election participation.
+                    </div>
+                    <div class="french-translation">
+                        Direction d'initiatives de mobilisation communautaire pour accroître la sensibilisation politique 
+                        et l'inscription sur les listes électorales. Conception et animation d'ateliers d'éducation civique 
+                        sur les processus démocratiques, augmentant la participation éclairée aux élections locales.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="competencies">
+            <h2>Core Competencies</h2>
+            <div class="competencies-grid">
+                <div class="competency-category">
+                    <h4>Diplomacy & International Relations</h4>
+                    <ul>
+                        <li>Human Rights Frameworks (UDHR, ICCPR, ICESCR)</li>
+                        <li>Multilateral Negotiation</li>
+                        <li>Model UN Parliamentary Procedure</li>
+                        <li>Diplomatic Communication Protocols</li>
+                        <li>Conflict Resolution & Mediation</li>
+                        <li>Cultural Diplomacy</li>
+                        <li>Policy Analysis & Development</li>
+                        <li>Coalition Building & Consensus Development</li>
+                    </ul>
+                </div>
+
+                <div class="competency-category">
+                    <h4>U.S. Government Operations</h4>
+                    <ul>
+                        <li>Federal Service (GS-5 Level)</li>
+                        <li>U.S. Capitol Security Protocols</li>
+                        <li>Visitor Services & Public Diplomacy</li>
+                        <li>Interagency Coordination (Capitol Police)</li>
+                        <li>Safety & Risk Management</li>
+                        <li>Federal Records Management (NARA)</li>
+                        <li>Government Documentation Standards</li>
+                        <li>Legislative Institution Knowledge</li>
+                    </ul>
+                </div>
+
+                <div class="competency-category">
+                    <h4>Cross-Cultural Communication</h4>
+                    <ul>
+                        <li>French Language (DELF B1)</li>
+                        <li>FLE Teaching Methodology</li>
+                        <li>Intercultural Competency</li>
+                        <li>Translation & Interpretation</li>
+                        <li>Diplomatic Correspondence</li>
+                        <li>Public Speaking & Presentations</li>
+                        <li>Multilingual Stakeholder Engagement</li>
+                        <li>Cultural Mediation</li>
+                    </ul>
+                </div>
+
+                <div class="competency-category">
+                    <h4>Research & Documentation</h4>
+                    <ul>
+                        <li>Geopolitical Assessment</li>
+                        <li>Human Rights Monitoring</li>
+                        <li>Policy Impact Evaluation</li>
+                        <li>Regional Studies Analysis</li>
+                        <li>Qualitative Research Methods</li>
+                        <li>Campaign Data Analysis</li>
+                        <li>Position Paper Development</li>
+                        <li>Archival Research & Preservation</li>
+                    </ul>
+                </div>
+
+                <div class="competency-category">
+                    <h4>Leadership & Program Management</h4>
+                    <ul>
+                        <li>Organizational Leadership</li>
+                        <li>Strategic Partnership Development</li>
+                        <li>Community Organizing</li>
+                        <li>Budget Management</li>
+                        <li>Event Coordination & Planning</li>
+                        <li>Mentorship & Training</li>
+                        <li>Program Assessment & Evaluation</li>
+                        <li>Stakeholder Relations</li>
+                    </ul>
+                </div>
+
+                <div class="competency-category">
+                    <h4>Civic Engagement & Advocacy</h4>
+                    <ul>
+                        <li>Grassroots Mobilization</li>
+                        <li>Voter Registration & Education</li>
+                        <li>Political Campaign Operations</li>
+                        <li>Community Outreach & Canvassing</li>
+                        <li>Advocacy Materials Development</li>
+                        <li>Digital Political Engagement</li>
+                        <li>Coalition Building</li>
+                        <li>Democratic Process Education</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 3rem;">Language Proficiency</h3>
+            <div class="languages">
+                <div class="language-item">
+                    <div class="language-name">English</div>
+                    <div class="language-level">Native Proficiency</div>
+                </div>
+                <div class="language-item">
+                    <div class="language-name">French</div>
+                    <div class="language-level">Professional Working Proficiency (DELF B1)</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="recommendations">
+            <h2>Letters of Recommendation</h2>
+            <h2 class="french-translation" style="font-size: 1.5rem; margin-top: -1rem; margin-bottom: 2rem; border: none; padding: 0;">Lettres de recommandation</h2>
+            
+            <div class="recommendation-cards">
+                <div class="recommendation-card">
+                    <div class="recommendation-header">
+                        <div class="recommendation-author">
+                            <h3>Professor Doug Mrazek</h3>
+                            <p class="recommendation-title">Professor Emeritus, French Department</p>
+                            <p class="recommendation-title-fr">Professeur émérite, Département de français</p>
+                            <p class="recommendation-org">Clark College, Vancouver, Washington</p>
+                            <p class="recommendation-date">September 25, 2016</p>
+                        </div>
+                    </div>
+                    
+                    <div class="recommendation-content">
+                        <p><em>To whom it may concern:</em></p>
+                        
+                        <p>I have known Ronnie Bailey since March, 2014, when he enrolled in my first year French class at Clark College. He has by now successfully completed the entire sequence of second year French.</p>
+                        
+                        <p>Ronnie is a motivated student who is truly reliable in class. His attendance is excellent. He is punctual with all assignments and takes advantage of extra credit opportunities. He cooperates well with anyone he may be working both in class and beyond.</p>
+                        
+                        <p>For over two years, Ronnie attended and helped lead the Clark College French Club. He served as Vice-President and Co-President last year. He provided input and used on-line resources to create and promote our quarterly film series and an annual field trip, this year to the Seattle Art Museum.</p>
+                        
+                        <p><strong>I would fully recommend Ronnie for any opportunity that will enable him to continue his educational goals.</strong></p>
+                        
+                        <p>Please contact me if I can provide further information on his behalf.</p>
+                        
+                        <p class="recommendation-signature">
+                            Sincerely,<br>
+                            <strong>Doug Mrazek, Professor Emeritus</strong><br>
+                            French Department, Clark College<br>
+                            Vancouver, WA<br>
+                            Phone: 360-574-0831<br>
+                            Email: dmrazek@comcast.net
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Placeholder for second letter -->
+                <div class="recommendation-card" style="border: 2px dashed var(--border-color); background: #fafafa;">
+                    <div class="recommendation-header">
+                        <div class="recommendation-author">
+                            <h3 style="color: var(--text-secondary);">Additional Recommendation</h3>
+                            <p class="recommendation-title" style="color: var(--text-secondary);">To be added</p>
+                            <p class="recommendation-title-fr" style="color: var(--text-secondary);">À ajouter</p>
+                        </div>
+                    </div>
+                    
+                    <div class="recommendation-content" style="text-align: center; padding: 3rem 2rem; color: var(--text-secondary);">
+                        <p style="font-style: italic;">Second letter of recommendation from Alliance Française will be added here.</p>
+                        <p style="font-style: italic; font-size: 0.9rem; margin-top: 0.5rem;">La deuxième lettre de recommandation de l'Alliance Française sera ajoutée ici.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="focus">
+            <h2>Areas of Specialization</h2>
+            <div class="focus-areas">
+                <div class="focus-card">
+                    <div class="focus-icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/United_Nations_Emblem.svg/1200px-United_Nations_Emblem.svg.png" alt="UN Emblem" style="width: 60px; height: auto;">
+                    </div>
+                    <div class="focus-title">Human Rights Advocacy</div>
+                    <div class="focus-description">
+                        Certified expertise in international human rights frameworks, monitoring methodologies, and 
+                        advocacy strategies. Focus on documentation standards, policy analysis, and practical application 
+                        of UDHR principles in international development contexts.
+                    </div>
+                </div>
+
+                <div class="focus-card">
+                    <div class="focus-icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Seal_of_the_United_States_Congress.svg/1200px-Seal_of_the_United_States_Congress.svg.png" alt="US Congress Seal" style="width: 60px; height: auto;">
+                    </div>
+                    <div class="focus-title">U.S. Government Service</div>
+                    <div class="focus-description">
+                        Federal service experience at the U.S. Capitol Visitor Center (GS-5), interfacing with 
+                        15,000 daily visitors including international delegations and diplomatic guests. Expertise 
+                        in federal security protocols, interagency coordination, and representing American democratic 
+                        institutions to global audiences.
+                    </div>
+                </div>
+
+                <div class="focus-card">
+                    <div class="focus-icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png" alt="French Flag" style="width: 60px; height: auto;">
+                    </div>
+                    <div class="focus-title">Francophone Affairs</div>
+                    <div class="focus-description">
+                        Three years of intensive French language and cultural studies through Alliance Française. 
+                        Expertise in francophone institutional frameworks, cultural programming, FLE teaching methodology, 
+                        and French-language professional communication in diplomatic and international settings.
+                    </div>
+                </div>
+
+                <div class="focus-card">
+                    <div class="focus-icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/UN_emblem_blue.svg/1200px-UN_emblem_blue.svg.png" alt="UN Blue Emblem" style="width: 60px; height: auto;">
+                    </div>
+                    <div class="focus-title">Multilateral Diplomacy</div>
+                    <div class="focus-description">
+                        Model UN training in coalition building, consensus development, and parliamentary procedure. 
+                        Understanding of UN system operations, international organization structures, diplomatic protocol, 
+                        and multilateral negotiation strategies for complex international issues.
+                    </div>
+                </div>
+
+                <div class="focus-card">
+                    <div class="focus-icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png" alt="US Flag" style="width: 60px; height: auto;">
+                    </div>
+                    <div class="focus-title">Civic Engagement & Democracy</div>
+                    <div class="focus-description">
+                        Grassroots political organizing experience including voter registration drives, civic education 
+                        workshops, community mobilization, and campaign strategy development. Expertise in democratic 
+                        participation, electoral processes, and political advocacy at local and national levels.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Information</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-details">
+                        <div class="contact-label">Location</div>
+                        <div class="contact-value">Richmond, Virginia, USA</div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-details">
+                        <div class="contact-label">Email</div>
+                        <div class="contact-value">
+                            <a href="mailto:RonnieBailey@Live.com">RonnieBailey@Live.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-details">
+                        <div class="contact-label">Phone</div>
+                        <div class="contact-value">
+                            <a href="tel:+13607198377">(360) 719-8377</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-details">
+                        <div class="contact-label">Professional Network</div>
+                        <div class="contact-value">Available upon request</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, #f7f9fc 0%, #ffffff 100%); border-radius: 8px; border: 1px solid var(--border-color); text-align: center;">
+                <h3 style="color: var(--diplomatic-navy); margin-bottom: 1rem;">Areas of Interest</h3>
+                <p style="font-size: 0.95rem; line-height: 1.8; color: var(--text-secondary); max-width: 800px; margin: 0 auto;">
+                    Pursuing opportunities in international relations, human rights advocacy, multilateral organizations, 
+                    cultural diplomacy, francophone affairs, international development, and diplomatic services. Particularly 
+                    interested in roles with UN agencies, NGOs, think tanks, State Department, USAID, international 
+                    educational institutions, and organizations working at the intersection of human rights and 
+                    international cooperation.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Ronnie Bailey | International Relations & Human Rights Professional</p>
+        <p style="margin-top: 0.5rem; font-size: 0.85rem;">
+            Advancing Multilateral Cooperation, Human Rights, and Cultural Understanding
+        </p>
+    </footer>
+</body>
+</html>
