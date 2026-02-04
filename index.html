@@ -15,41 +15,29 @@
             --diplomatic-navy: #1a2332;
             --diplomatic-blue: #2c4a6b;
             --gold-accent: #c5a572;
-            --light-cream: #f8f6f0;
+            --light-cream: #f5f1e8;
+            --soft-white: #faf8f3;
             --text-primary: #2d3748;
             --text-secondary: #4a5568;
-            --border-color: #cbd5e0;
+            --border-color: #d4cfc4;
         }
 
         body {
             font-family: 'Georgia', 'Times New Roman', serif;
             line-height: 1.7;
             color: var(--text-primary);
-            background-color: var(--light-cream);
+            background-color: var(--diplomatic-blue);
         }
 
         /* Header Section */
         header {
-            background: linear-gradient(135deg, rgba(26, 35, 50, 0.88) 0%, rgba(44, 74, 107, 0.85) 100%), 
-                        url('capitol-banner.jpg') center/cover no-repeat;
-            background-attachment: fixed;
+            background: var(--diplomatic-blue);
             color: white;
-            padding: 5rem 2rem;
+            padding: 4rem 2rem;
             text-align: center;
             border-bottom: 4px solid var(--gold-accent);
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
             position: relative;
-        }
-
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(to bottom, transparent 0%, rgba(26, 35, 50, 0.3) 100%);
-            pointer-events: none;
         }
 
         .header-content {
@@ -89,7 +77,6 @@
             margin-bottom: 0.5rem;
             text-transform: uppercase;
             font-family: 'Palatino', 'Georgia', serif;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
         }
 
         .title {
@@ -99,7 +86,6 @@
             margin-bottom: 1rem;
             color: var(--gold-accent);
             font-style: italic;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
         }
 
         .subtitle {
@@ -109,12 +95,11 @@
             max-width: 700px;
             margin: 1.5rem auto 0;
             opacity: 0.95;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
         }
 
         /* Navigation */
         nav {
-            background-color: white;
+            background-color: var(--soft-white);
             padding: 1rem 2rem;
             position: sticky;
             top: 0;
@@ -155,12 +140,13 @@
             max-width: 1100px;
             margin: 0 auto;
             padding: 3rem 2rem;
+            background-color: var(--light-cream);
         }
 
         /* Section Styling */
         section {
             margin-bottom: 4rem;
-            background: white;
+            background: var(--soft-white);
             padding: 3rem;
             border-radius: 8px;
             box-shadow: 0 2px 15px rgba(0,0,0,0.06);
@@ -208,7 +194,7 @@
         }
 
         .credential-card {
-            background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+            background: var(--soft-white);
             padding: 2rem;
             border-radius: 8px;
             border: 1px solid var(--border-color);
@@ -404,7 +390,7 @@
         }
 
         .focus-card {
-            background: white;
+            background: var(--soft-white);
             padding: 2rem;
             border-radius: 8px;
             border: 2px solid var(--border-color);
@@ -589,7 +575,7 @@
         }
 
         .recommendation-card {
-            background: white;
+            background: var(--soft-white);
             border: 1px solid var(--border-color);
             border-radius: 8px;
             padding: 2rem;
@@ -691,9 +677,6 @@
 <body>
     <header>
         <div class="header-content">
-            <div class="seal-container">
-                <div class="seal-icon">RB</div>
-            </div>
             <h1>Ronnie Bailey</h1>
             <p class="title">International Relations Professional & Human Rights Consultant</p>
             <p class="subtitle">
@@ -746,7 +729,7 @@
             <div class="credentials-grid">
                 <div class="credential-card">
                     <div class="credential-icon">
-                        <img src="https://usidhr.org/wp-content/uploads/2023/01/cropped-USIDHR-LOGO.png" alt="USIDHR Logo" style="width: 80px; height: auto;">
+                        <div style="width: 80px; height: 80px; border: 2px solid var(--diplomatic-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem; color: var(--diplomatic-blue);">USIDHR</div>
                     </div>
                     <div class="credential-title">Certified Human Rights Consultant</div>
                     <div class="credential-title-fr">Consultant certifié en droits de l'homme</div>
@@ -756,7 +739,8 @@
 
                 <div class="credential-card">
                     <div class="credential-icon">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Seal_of_the_Architect_of_the_Capitol.svg/1200px-Seal_of_the_Architect_of_the_Capitol.svg.png" alt="Architect of the Capitol Seal" style="width: 70px; height: auto;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/Seal_of_the_Architect_of_the_Capitol.svg" alt="Architect of the Capitol" style="width: 70px; height: auto;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div style="display: none; width: 70px; height: 70px; border: 2px solid var(--diplomatic-blue); border-radius: 50%; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9rem; color: var(--diplomatic-blue); text-align: center; padding: 5px;">AOC</div>
                     </div>
                     <div class="credential-title">U.S. Government Service (GS-5)</div>
                     <div class="credential-title-fr">Service du gouvernement américain (GS-5)</div>
@@ -766,7 +750,8 @@
 
                 <div class="credential-card">
                     <div class="credential-icon">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Seal_of_the_United_States_Department_of_Homeland_Security.svg/1200px-Seal_of_the_United_States_Department_of_Homeland_Security.svg.png" alt="DHS Seal" style="width: 70px; height: auto;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Seal_of_the_United_States_Department_of_Homeland_Security.svg" alt="DHS Seal" style="width: 70px; height: auto;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div style="display: none; width: 70px; height: 70px; border: 2px solid var(--diplomatic-blue); border-radius: 50%; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9rem; color: var(--diplomatic-blue);">DHS</div>
                     </div>
                     <div class="credential-title">DHS Records Management Certificate</div>
                     <div class="credential-title-fr">Certificat de gestion des archives du DHS</div>
@@ -776,7 +761,7 @@
 
                 <div class="credential-card">
                     <div class="credential-icon">
-                        <img src="https://www.clark.edu/cc/images/logo.svg" alt="Clark College Logo" style="width: 80px; height: auto;">
+                        <div style="width: 80px; height: 80px; border: 2px solid var(--diplomatic-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1rem; color: var(--diplomatic-blue);">CLARK</div>
                     </div>
                     <div class="credential-title">International Studies Certificate Program</div>
                     <div class="credential-title-fr">Programme de certificat d'études internationales</div>
@@ -786,7 +771,8 @@
 
                 <div class="credential-card">
                     <div class="credential-icon">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/ee/Alliance_fran%C3%A7aise_logo.svg/1200px-Alliance_fran%C3%A7aise_logo.svg.png" alt="Alliance Française Logo" style="width: 80px; height: auto;">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/e/ee/Alliance_fran%C3%A7aise_logo.svg" alt="Alliance Française" style="width: 80px; height: auto;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div style="display: none; width: 80px; height: 80px; border: 2px solid var(--diplomatic-blue); border-radius: 50%; align-items: center; justify-content: center; font-weight: bold; font-size: 0.85rem; color: var(--diplomatic-blue); text-align: center; padding: 5px;">Alliance<br>Française</div>
                     </div>
                     <div class="credential-title">French Language & Literature Studies</div>
                     <div class="credential-title-fr">Études de langue et littérature françaises</div>
@@ -796,7 +782,7 @@
 
                 <div class="credential-card">
                     <div class="credential-icon">
-                        <img src="https://redistrictingaction.org/wp-content/uploads/2021/01/all-on-the-line-logo.png" alt="All On The Line Logo" style="width: 80px; height: auto;">
+                        <div style="width: 80px; height: 80px; border: 2px solid var(--diplomatic-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.75rem; color: var(--diplomatic-blue); text-align: center; padding: 8px; line-height: 1.2;">ALL ON<br>THE LINE</div>
                     </div>
                     <div class="credential-title">Civic Engagement & Political Organizing</div>
                     <div class="credential-title-fr">Engagement civique et organisation politique</div>
